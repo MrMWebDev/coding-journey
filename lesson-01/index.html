@@ -12,7 +12,10 @@
 <body>
     <header>
         <div class="logo-bg">
-            <img class="nav-img" src="images/mrm3dprints-long.png" alt="MrM3DPrints Logo" />
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/mrm3dprints.png" />
+                <img class="nav-img" src="images/mrm3dprints-long.png" alt="MrM3DPrints Logo" />
+            </picture>
         </div>
 
         <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
@@ -20,15 +23,14 @@
         </button>
 
         <nav id="main-nav">
-            <!-- Navigation links -->
-            <a href="#">Home</a>
-            <a href="#">Products</a>
-            <a href="#">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section id="home">
             <h1>Welcome to MrM3DPrints</h1>
             <p>
                 We are a small business dedicated to creating innovative 3D printed products that help you
@@ -36,7 +38,7 @@
             </p>
         </section>
 
-        <h2>Featured Products</h2>
+        <h2 id="products">Featured Products</h2>
 
         <div id="product-list">
 
@@ -67,7 +69,7 @@
 
     </section>
 
-    <footer>
+    <footer id="contact">
         <h3>Contact Us</h3>
         <p>Email: mrmwebdev@gmail.com</p>
         <p>Developed By MrMWebDev</p>

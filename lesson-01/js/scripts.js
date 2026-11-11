@@ -8,6 +8,15 @@ menuToggle.addEventListener("click", function () {
     menuToggle.setAttribute("aria-expanded", isOpen);
 });
 
+const navLinks = mainNav.querySelectorAll("a");
+
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        mainNav.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+    });
+});
+
 const products = [
     {
         name: "SnapNeat Starter Kit",

@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #090b0d;
     color: #e6e6e6;
@@ -158,4 +162,8 @@ p {
     #main-nav.active {
         display: flex;
     }
+
+    .nav-img {
+    max-width: 60px;
+}
 }
