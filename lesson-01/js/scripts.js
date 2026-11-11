@@ -11,7 +11,7 @@ menuToggle.addEventListener("click", function () {
 const products = [
     {
         name: "SnapNeat Starter Kit",
-        image: "images/SnapNeat.png",
+        image: "images/snapneat.png",
         description: "A modular magnetic desk organisation system.",
         price: "£24.99",
         numericPrice: 24.99,
@@ -20,23 +20,36 @@ const products = [
     },
     {
         name: "Bookend Planter With Water Reservoir",
-        image: "images/Bookend Planter With Water Reservoir.jpeg",
+        image: "images/bookend-planter.jpeg",
         description: "A stylish bookend that doubles as a planter.",
         price: "From £9.50",
         url: "https://www.etsy.com/uk/listing/4302554150/bookend-planter-with-water-reservoir",
     },
     {
         name: "Handy Toolkit",
-        image: "images/Handy Toolkit.jpg",
+        image: "images/handy-toolkit.jpg",
         description: "A compact and versatile tool for all your DIY needs.",
         price: "From £9.98",
         url: "https://www.etsy.com/uk/listing/4442723619/handy-toolkit",
     },
 ];
+
 products.forEach(function (product) {
     const productCard = document.createElement("section");
 
     productCard.classList.add("product-section");
+
+    let priceHTML = "";
+    if (product.discount) {
+        const discountedPrice = calculateDiscount(product.numericPrice, product.discount);
+        priceHTML = `
+            <span class="old-price">${product.price}</span>
+            <strong>£${discountedPrice.toFixed(2)}</strong>
+            <small>${product.discount}% OFF</small>
+        `;
+    } else {
+        priceHTML = product.price;
+    }
 
     productCard.innerHTML = `
         <h3>${product.name}</h3>
@@ -45,7 +58,7 @@ products.forEach(function (product) {
         <button class="neon-button highlight-button">
             Highlight product
         </button>
-        <p>${product.price}</p>
+        <p>${priceHTML}</p>
         <a class="neon-button" href="${product.url}" target="_blank" rel="noopener noreferrer">
             View Etsy
         </a>
@@ -61,22 +74,13 @@ productList.addEventListener("click", function (event) {
     }
 });
 
-
-
 function highlightProduct(productSection) {
     productSection.classList.toggle("highlight");
-};
-
-function removeHighlight(productSection) {
-    productSection.classList.remove("highlight");
-};
+}
 
 function calculateDiscount(price, discount) {
     const discountAmount = price * (discount / 100);
     const finalPrice = price - discountAmount;
 
     return Number(finalPrice.toFixed(2));
-};
-
-const starterKitPrice = calculateDiscount(24.99, 10);
-
+}

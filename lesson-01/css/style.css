@@ -14,6 +14,16 @@ header {
 }
 
 /* Navigation links */
+#menu-toggle {
+    display: none;
+    background: #15191c;
+    color: #26ba0c;
+    border: 1px solid #26ba0c;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 nav {
     display: flex;
     align-items: center;
@@ -113,6 +123,10 @@ p {
     color: #e6e6e6;
 }
 
+.old-price {
+    text-decoration: line-through;
+}
+
 .product-section h2 {
     color: #26ba0c;
     text-shadow: 0 0 8px rgba(38, 186, 12, 0.4);
@@ -122,15 +136,7 @@ p {
     box-shadow: 0 0 20px rgba(38, 186, 12, 0.6);
 }
 
-#menu-toggle {
-    display: none;
-    background: #15191c;
-    color: #26ba0c;
-    border: 1px solid #26ba0c;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-}
+
 
 @media (max-width: 600px) {
     header {
