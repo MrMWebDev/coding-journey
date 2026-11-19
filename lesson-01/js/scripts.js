@@ -1,5 +1,6 @@
 const menuToggle = document.getElementById("menu-toggle");
 const productList = document.getElementById("product-list");
+const reviewList = document.getElementById("review-list");
 const mainNav = document.getElementById("main-nav");
 
 menuToggle.addEventListener("click", function () {
@@ -17,31 +18,7 @@ navLinks.forEach(function (link) {
     });
 });
 
-const products = [
-    {
-        name: "SnapNeat Starter Kit",
-        image: "images/snapneat.png",
-        description: "A modular magnetic desk organisation system.",
-        price: "£24.99",
-        numericPrice: 24.99,
-        discount: 10,
-        url: "https://www.etsy.com/uk/listing/4554990219/snapneat-modular-desk-organizer-set",
-    },
-    {
-        name: "Bookend Planter With Water Reservoir",
-        image: "images/bookend-planter.jpeg",
-        description: "A stylish bookend that doubles as a planter.",
-        price: "From £9.50",
-        url: "https://www.etsy.com/uk/listing/4302554150/bookend-planter-with-water-reservoir",
-    },
-    {
-        name: "Handy Toolkit",
-        image: "images/handy-toolkit.jpg",
-        description: "A compact and versatile tool for all your DIY needs.",
-        price: "From £9.98",
-        url: "https://www.etsy.com/uk/listing/4442723619/handy-toolkit",
-    },
-];
+
 
 products.forEach(function (product) {
     const productCard = document.createElement("section");
@@ -93,3 +70,20 @@ function calculateDiscount(price, discount) {
 
     return Number(finalPrice.toFixed(2));
 }
+
+reviews.forEach(function (review) {
+    const reviewCard = document.createElement("article");
+
+    reviewCard.classList.add("review-card");
+
+    reviewCard.innerHTML = `
+        <h3>${review.name}</h3>
+        <p>${review.text}</p>
+        <div class="stars">
+            ${"★".repeat(review.stars)}${"☆".repeat(5 - review.stars)}
+        </div>
+    `;
+
+    reviewList.appendChild(reviewCard);
+});
+

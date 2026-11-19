@@ -140,6 +140,18 @@ p {
     box-shadow: 0 0 20px rgba(38, 186, 12, 0.6);
 }
 
+.review-card {
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #15191c;
+    border: 1px solid #26ba0c;
+    box-shadow: 0 0 12px rgba(38, 186, 12, 0.15);
+}
+
 .social-links {
     display: flex;
     flex-wrap: wrap;
