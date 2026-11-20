@@ -15,5 +15,5 @@ const reviews = [
         stars: 5,
     }
 
-    
+
 ];
