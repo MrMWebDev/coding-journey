@@ -2,6 +2,8 @@ const menuToggle = document.getElementById("menu-toggle");
 const productList = document.getElementById("product-list");
 const reviewList = document.getElementById("review-list");
 const mainNav = document.getElementById("main-nav");
+const prevButton = document.getElementById("prev-review");
+const nextButton = document.getElementById("next-review");
 
 menuToggle.addEventListener("click", function () {
     const isOpen = mainNav.classList.toggle("active");
@@ -85,5 +87,16 @@ reviews.forEach(function (review) {
     `;
 
     reviewList.appendChild(reviewCard);
+});
+
+prevButton.addEventListener("click", function () {
+    reviewList.scrollBy(
+        { left: -reviewList.clientWidth, behavior: "smooth" }
+    );
+});
+nextButton.addEventListener("click", function () {
+    reviewList.scrollBy(
+        { left: reviewList.clientWidth, behavior: "smooth" }
+    );
 });
 

@@ -9,6 +9,7 @@
     --muted-color: #a6a6a6;
     --text-color: #e6e6e6;
     --text-on-green: #000000;
+    --btn-bg-color: rgba(38, 186, 12, 0.6);
 }
 
 html {
@@ -66,6 +67,7 @@ nav {
 header a {
     text-decoration: none;
     padding: 10px 16px;
+    white-space: nowrap;
     border-radius: 5px;
     color: var(--primary-color);
     transition:
@@ -99,7 +101,8 @@ header a:hover {
 .neon-button:focus-visible,
 nav a:focus-visible,
 .social-links a:focus-visible,
-.email:focus-visible {
+.email:focus-visible,
+.carousel-btn:focus-visible {
     outline: 2px solid var(--text-color);
     outline-offset: 4px;
 }
@@ -158,16 +161,55 @@ p {
     box-shadow: 0 0 20px var(--bright-color);
 }
 
+#review-list {
+    display: flex;
+
+    padding: 10px;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+
+}
+
 .review-card {
     box-sizing: border-box;
-    width: 90%;
-    max-width: 700px;
+    flex: 0 0 100%;
     margin: 40px auto;
-    padding: 25px;
+    padding: 25px 50px;
     border-radius: 12px;
     background-color: var(--secondary-color);
     border: 1px solid var(--primary-color);
     box-shadow: 0 0 12px var(--glow-color);
+    scroll-snap-align: center;
+}
+
+.carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+
+.carousel-btn {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--btn-bg-color);
+    color: var(--text-on-green);
+    cursor: pointer;
+}
+
+#prev-review {
+    left: 15px;
+}
+
+#next-review {
+    right: 15px;
 }
 
 .stars {
@@ -232,7 +274,7 @@ p {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 810px) {
     header {
         flex-wrap: wrap;
         align-items: center;
