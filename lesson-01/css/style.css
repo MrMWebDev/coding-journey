@@ -97,7 +97,9 @@ header a:hover {
 }
 
 .neon-button:focus-visible,
-nav a:focus-visible, .social-links a:focus-visible {
+nav a:focus-visible,
+.social-links a:focus-visible,
+.email:focus-visible {
     outline: 2px solid var(--text-color);
     outline-offset: 4px;
 }
@@ -105,6 +107,7 @@ nav a:focus-visible, .social-links a:focus-visible {
 h1,
 h2,
 h3 {
+    font-family: "Archivo Black", Arial, sans-serif;
     text-align: center;
     color: var(--primary-color);
 }
@@ -200,9 +203,15 @@ p {
 }
 
 .social-section,
-#contact {
+#contact,
+#business {
     margin: 40px auto;
     padding: 0 20px;
+}
+
+#business ul {
+    list-style-type: none;
+    padding: 0;
 }
 
 #contact .email {

@@ -39,7 +39,7 @@ products.forEach(function (product) {
 
     productCard.innerHTML = `
         <h3>${product.name}</h3>
-        <img class="product-img" src="${product.image}" alt="${product.name}">
+        <img class="product-img" src="${product.image}" alt="${product.name}" loading="lazy">
         <p>${product.description}</p>
         <button class="neon-button highlight-button">
             Highlight product
