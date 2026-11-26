@@ -1,0 +1,130 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="3D printing services and 3D printed home decor products, made in the UK">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="images/mrm3dprints.png" type="image/png">
+    <title>MrM3DPrints | 3D Printed Desk & Home Products</title>
+    <meta property="og:title" content="MrM3DPrints | 3D Printed Desk & Home Products">
+    <meta property="og:description" content="3D printing services and 3D printed home decor products, made in the UK">
+    <meta property="og:type" content="website">
+    <!-- <meta property="og:image" content="images/mrm3dprints.png"> -->
+</head>
+
+<body>
+    <header>
+        <div class="logo-bg">
+            <picture>
+                <source media="(max-width: 810px)" srcset="images/mrm3dprints.webp" />
+                <img class="nav-img" src="images/mrm3dprints-long.webp" alt="MrM3DPrints Logo" />
+            </picture>
+        </div>
+
+        <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+            ☰ Menu
+        </button>
+
+        <nav id="main-nav">
+            <a href="#home">Home</a>
+            <a href="#featured-products">Products</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#business">Bulk Orders</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to MrM3DPrints</h1>
+            <p>
+                We are a small business dedicated to creating innovative 3D printed products that help you
+                stay organized and make your life easier.
+            </p>
+        </section>
+
+        <h2 id="featured-products">Featured Products</h2>
+
+        <div id="product-list">
+
+        </div>
+
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+
+            <div class="carousel">
+                <button class="carousel-btn" id="prev-review" type="button" aria-label="Previous review">←</button>
+
+                <div id="review-list">
+                    <!-- Reviews will be dynamically inserted here -->
+                </div>
+
+                <button class="carousel-btn" id="next-review" type="button" aria-label="Next review">→</button>
+
+            </div>
+        </section>
+
+        <section class="centered" id="business">
+            <h2>Bulk Ordering for Businesses</h2>
+            <p>We print small batches of custom parts for businesses.</p>
+            <ul>
+                <li>Custom parts and prototypes, printed in small batches</li>
+                <li>Send an STL file, a sketch or just an idea</li>
+                <li>We'll reply with a quote</li>
+            </ul>
+            <a class="neon-button" href="mailto:mrmwebdev@gmail.com?subject=Bulk%20order%20enquiry">Get a Quote</a>
+        </section>
+
+        <section class="social-section">
+
+            <h2>Follow Us</h2>
+
+            <div class="social-links">
+                <a href="https://www.facebook.com/MrM3DPrints" target="_blank" rel="noopener noreferrer">
+                    Facebook
+                </a>
+                <a href="https://www.instagram.com/mrm3dprints" target="_blank" rel="noopener noreferrer">
+                    Instagram
+                </a>
+                <a href="https://mrm3dprints.etsy.com" target="_blank" rel="noopener noreferrer">
+                    Etsy Shop
+                </a>
+            </div>
+
+        </section>
+
+        <section class="centered" id="contact">
+
+            <h2>Contact Us</h2>
+
+            <p>We would love to hear from you! If you have any questions, comments, or inquiries about our products,
+                please
+                feel free to reach out to us.</p>
+
+            <p>Email: <a class="email" href="mailto:mrmwebdev@gmail.com">mrmwebdev@gmail.com</a></p>
+
+            <a class="neon-button" href="https://mrm3dprints.etsy.com" target="_blank" rel="noopener noreferrer">
+                Visit Our Etsy Shop
+            </a>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; MrM3DPrints. All rights reserved.</p>
+
+        <p>Developed By MrMWebDev</p>
+    </footer>
+
+    <script src="js/reviews.js" defer></script>
+    <script src="js/products.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+</body>
+
+</html>
